@@ -5,8 +5,8 @@ s = time.time()
 from keras import backend as K
 import tensorflow as tf
 import sys
-
 import cv2
+
 sys.path.append('/Users/daryldrake/Desktop/CS_Projects/Active/face_id_facenet_fork/facenet/')
 
 
