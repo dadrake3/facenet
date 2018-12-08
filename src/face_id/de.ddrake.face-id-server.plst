@@ -6,7 +6,7 @@
 	<string>face-id</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Users/daryldrake/Desktop/CS_Projects/Active/facenet/src/contributed/face_id_server.sh</string>
+		<string>/Users/daryldrake/Desktop/CS_Projects/Active/face_id_facenet_fork/facenet/src/face_id/face_id_server.sh</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>

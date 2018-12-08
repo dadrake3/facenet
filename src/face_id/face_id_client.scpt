@@ -3,11 +3,12 @@ set flag to do shell script "/Users/daryldrake/daryldrake/bin/python /Users/dary
 if flag is equal to "True" then
 	tell application "System Events"
 
-		keystroke "******" --password
+		keystroke "D96daryl" --password
 		delay 1
 		key code 52 -- enter
 	end tell
 else
 	display notification "Doubletap to try again" with title "FaceID Failed"
+	beep
 
 end if
