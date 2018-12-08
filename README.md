@@ -1,4 +1,4 @@
-# FaceID for MacOS
+# FaceID for macOS 10.14.1
 
 
 This is a custom implementation of Apples FaceID feature using Google ["FaceNet"](https://github.com/davidsandberg/facenet) run as a Launch Daemon service provider. Uses a ["SleepWatcher"](https://www.bernhard-baehr.de) Launch Daemon to call a client Apple / Bash script on screen wake. Uses Pyro4 with a nameserver to host the tensorflow facnet as a Daemon. Client Apple / Bash script can also be called from ["BetterTouchTools"](https://folivora.ai) to provide FaceID password entry to any app with trackpad gestures.  
@@ -20,7 +20,7 @@ This is a custom implementation of Apples FaceID feature using Google ["FaceNet"
 6) Update face.py and face_id_server.py to set the path if necessary. Also change the classier label to whatever you used when training your classier. 
 
 ## Compatibility
-The code was developed using Tensorflow r1.12 under Mac OSX 10.14.1 with Python 3.6. 
+The code was developed using Tensorflow r1.12 under macOS 10.14.1 with Python 3.6. 
 
 
 ## Performance
