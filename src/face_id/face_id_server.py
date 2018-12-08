@@ -7,6 +7,8 @@ import tensorflow as tf
 import sys
 import cv2
 
+
+# TODO: THIS NEEDS TO BE FIXED, imports are weird too
 sys.path.append('/Users/daryldrake/Desktop/CS_Projects/Active/face_id_facenet_fork/facenet/')
 
 

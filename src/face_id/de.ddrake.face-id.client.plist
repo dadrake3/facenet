@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>de.bernhard-baehr.sleepwatcher</string>
+	<string>de.ddrake.face-id.client</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/usr/local/sbin/sleepwatcher</string>
 		<string>-V</string>
-		<string>-w osascript /Users/daryldrake/Desktop/CS_Projects/Active/facenet/src/contributed/face_id_client.scpt</string>
+		<string>-w osascript XYZ</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
@@ -16,3 +16,4 @@
 	<true/>
 </dict>
 </plist>
+
