@@ -10,6 +10,7 @@ cd facenet/src/face_id
 
 
 # install requirements
+brew install pip
 python -m pip install -r ../../requirements.txt
 brew install sleepwatcher
 
@@ -38,6 +39,9 @@ python src/classifier.py TRAIN ~/datasets/my_dataset/train/ ~/models/model-20170
 
 # remove as no longer needed
 rm ~/datasets/lfw/lfw_mtcnnpy_160
+
+
+# copy files first then do replacements so this can be rerun
 
 # use these to change the paths in face.py
 face_py_path = $PWD/face.py
@@ -73,3 +77,6 @@ launchctl unload /Library/LaunchDaemons/de.ddrake.face-id.client.plist
 
 launchctl load /Library/LaunchDaemons/de.ddrake.face-id.server.plist
 launchctl load /Library/LaunchDaemons/de.ddrake.face-id.client.plist
+
+
+# clean up temp files

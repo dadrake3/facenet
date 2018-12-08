@@ -8,7 +8,7 @@ if flag is equal to "True" then
 		key code 52 -- enter
 	end tell
 else
-	display notification "Doubletap to try again" with title "FaceID Failed"
+	display notification "Doubletap to try again if using BTT" with title "FaceID Failed"
 	beep
 
 end if

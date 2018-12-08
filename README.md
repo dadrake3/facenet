@@ -35,6 +35,14 @@ The code was developed using Tensorflow r1.12 under macOS 10.14.1 with Python 3.
 Performs inference in roughly 2-3 seconds, feels natural with IOS faceid. Using the server client model allowed us to get rid of the startup overhead from reimporting the dependencies and the Tensorflow model. Shaved about 6 seconds off total runtime.
 
 
+## Tools used
+
+- Activity Monitor
+- Script Editor
+- Automator for script timing
+- Pycharm
+- Homebrew
+
 ## ToDO
 1) Add support for multiple users.
 
