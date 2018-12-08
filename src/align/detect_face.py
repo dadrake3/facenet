@@ -210,9 +210,10 @@ class Network(object):
         max_axis = tf.reduce_max(target, axis, keepdims=True)
         target_exp = tf.exp(target-max_axis)
         normalize = tf.reduce_sum(target_exp, axis, keepdims=True)
-        softmax = tf.div(target_exp, normalize, name)
+        softmax = tf.math.divide(target_exp, normalize, name)
         return softmax
-    
+
+
 class PNet(Network):
     def setup(self):
         (self.feed('data') #pylint: disable=no-value-for-parameter, no-member
@@ -274,6 +275,8 @@ class ONet(Network):
              .fc(10, relu=False, name='conv6-3'))
 
 def create_mtcnn(sess, model_path):
+    # import time
+    # s = time.time()
     if not model_path:
         model_path,_ = os.path.split(os.path.realpath(__file__))
 
@@ -289,10 +292,12 @@ def create_mtcnn(sess, model_path):
         data = tf.placeholder(tf.float32, (None,48,48,3), 'input')
         onet = ONet({'data':data})
         onet.load(os.path.join(model_path, 'det3.npy'), sess)
-        
+
+    # print('snet', time.time() - s)
     pnet_fun = lambda img : sess.run(('pnet/conv4-2/BiasAdd:0', 'pnet/prob1:0'), feed_dict={'pnet/input:0':img})
     rnet_fun = lambda img : sess.run(('rnet/conv5-2/conv5-2:0', 'rnet/prob1:0'), feed_dict={'rnet/input:0':img})
     onet_fun = lambda img : sess.run(('onet/conv6-2/conv6-2:0', 'onet/conv6-3/conv6-3:0', 'onet/prob1:0'), feed_dict={'onet/input:0':img})
+
     return pnet_fun, rnet_fun, onet_fun
 
 def detect_face(img, minsize, pnet, rnet, onet, threshold, factor):
