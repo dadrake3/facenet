@@ -7,6 +7,14 @@ This is a custom implementation of Apples FaceID feature using Google ["FaceNet"
 
 ## Setup
 
+**WARNING**
+Build script is still under development, use at your own risk!
+
+Requires:
+-   homebrew
+-   python3.6 
+
+
 1) Follow ["LFA Validation"](https://github.com/davidsandberg/facenet/wiki/Validate-on-lfw) to get facenet running on your machine with a current frozen version of the model. Update the path to the model in face_id/face.py line 49.
 
 2) Follow ["Custom Facenet Classifier"](https://github.com/davidsandberg/facenet/wiki/Train-a-classifier-on-own-images) to train a classifier on your own images. For you will need to align you images using the first guide. I used a training set of ten images of myself from different angles in a folder labeled with my name, and several images from the LFA set in a different folder labeled unknown. Update the path to the classifier in /face_id/face.p line 50.

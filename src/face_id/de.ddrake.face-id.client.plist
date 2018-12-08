@@ -8,7 +8,7 @@
 	<array>
 		<string>/usr/local/sbin/sleepwatcher</string>
 		<string>-V</string>
-		<string>-w osascript XYZ</string>
+		<string>-w osascript CLIENT_APPLE_SCRIPT_PATH</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
