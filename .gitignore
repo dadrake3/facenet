@@ -93,3 +93,4 @@ ENV/
 # PyCharm project setting
 .idea
 src/face_id/face_id_client.scpt
+src/face_id/face_id_client.scpt
