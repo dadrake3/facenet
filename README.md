@@ -42,6 +42,7 @@ Performs inference in roughly 2-3 seconds, feels natural with IOS faceid. Using 
 - Automator for script timing
 - Pycharm
 - Homebrew
+- Py2app, exfreeze, pyinstaller
 
 ## ToDO
 0) Add client launch daemons for login and for screen savor dismiss
@@ -49,7 +50,9 @@ Performs inference in roughly 2-3 seconds, feels natural with IOS faceid. Using 
 2) Create a build script.
 3) Add support for multiple users.
 4) Add web cam overlay to login screen.
-
+5) Add support for detecting eye gaze
+6) Use a cnn to predict image depth then run detect face from pre-processing on the rgbd image, if it cant bound a face then they're probably using a image
+7) Add travis online build verifier
 
 this output might help with keychain 
 ioreg -b -r -n AppleKeyStore

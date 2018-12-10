@@ -1,0 +1,6 @@
+#!/Users/daryldrake/Desktop/CS_Projects/Active/face_id_facenet_fork/facenet/src/bin/python3
+
+from cx_Freeze import main
+
+main()
+
