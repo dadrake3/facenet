@@ -2,18 +2,11 @@ from __future__ import print_function
 import Pyro4
 import time
 s = time.time()
-from keras import backend as K
-import tensorflow as tf
-
-
-import argparse
 import sys
-
 import cv2
-# sys.path.append('/Users/daryldrake/Desktop/CS_Projects/Active/face_id_facenet_fork/facenet/')
 
-
-import face
+sys.path.append('./')
+import face_id.face as face
 
 
 @Pyro4.expose
@@ -85,10 +78,3 @@ def client():
     print(client.recognize_user())
 
 
-if __name__ == "__main__":
-    if sys.argv[1] == '--s':
-        #with tf.Session() as sess:
-        server()
-
-    elif sys.argv[1] == '--c':
-        client()

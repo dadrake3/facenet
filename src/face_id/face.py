@@ -8,7 +8,7 @@
 # high level container. It's an attempt to simplify the use of such
 # technology and provide an easy to use facial recognition package.
 #
-# https://github.com/davidsandberg/facenet
+# https://github.com/davidsandberg/face_net
 # https://github.com/shanren7/real_time_face_recognition
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,16 +38,16 @@ import tensorflow as tf
 from scipy import misc
 import sys
 
-sys.path.append('../../')
+sys.path.append('../')
 
 tf.logging.set_verbosity(tf.logging.ERROR)
 
-import src.align.detect_face
-import src.facenet as facenet
+import align.detect_face
+import face_net
 
 gpu_memory_fraction = 0.3
-facenet_model_checkpoint ="./model/pretrained_facenet_model_20180402-114759.pb"
-classifier_model = "./classifier/lfw_classifier.pkl"
+face_net_model_checkpoint ="../models/pretrained_facenet_model_20180402-114759.pb"
+classifier_model = "../models/lfw_classifier.pkl"
 debug = False
 
 
@@ -117,7 +117,7 @@ class Encoder:
             # import time
             # s = time.time()
 
-            facenet.load_model(facenet_model_checkpoint)
+            face_net.load_model(face_net_model_checkpoint)
             # print(time.time() - s)
 
 
@@ -127,7 +127,7 @@ class Encoder:
         embeddings = self.sess.graph.get_tensor_by_name("embeddings:0")
         phase_train_placeholder = self.sess.graph.get_tensor_by_name("phase_train:0")
 
-        prewhiten_face = facenet.prewhiten(face.image)
+        prewhiten_face = face_net.prewhiten(face.image)
 
         # Run forward pass to calculate embeddings
         feed_dict = {images_placeholder: [prewhiten_face], phase_train_placeholder: False}
@@ -152,12 +152,12 @@ class Detection:
 
             sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options, log_device_placement=False))
             with sess.as_default():
-                return src.align.detect_face.create_mtcnn(sess, None)
+                return align.detect_face.create_mtcnn(sess, None)
 
     def find_faces(self, image):
         faces = []
 
-        bounding_boxes, _ = src.align.detect_face.detect_face(image, self.minsize,
+        bounding_boxes, _ = align.detect_face.detect_face(image, self.minsize,
                                                           self.pnet, self.rnet, self.onet,
                                                           self.threshold, self.factor)
         for bb in bounding_boxes:

@@ -83,4 +83,3 @@ def read_pairs(pairs_filename):
     return np.array(pairs)
 
 
-
