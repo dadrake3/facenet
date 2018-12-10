@@ -15,7 +15,7 @@ class FaceIDServer(object):
     def __init__(self):
         self.frame_interval = 3  # Number of frames after which to run face detection
         self.face_recognition = face.Recognition()
-        self.user = 'Daryl Drake'
+        self.user = 'tommyholcomb'
 
     def recognize_user(self):
         s = time.time()

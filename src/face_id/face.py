@@ -38,7 +38,7 @@ import tensorflow as tf
 from scipy import misc
 import sys
 
-sys.path.append('../')
+sys.path.append('/Users/tommyholcomb/Documents/Github/facenet/src')
 
 tf.logging.set_verbosity(tf.logging.ERROR)
 
@@ -46,8 +46,8 @@ import align.detect_face
 import face_net
 
 gpu_memory_fraction = 0.3
-face_net_model_checkpoint ="../models/pretrained_facenet_model_20180402-114759.pb"
-classifier_model = "../models/lfw_classifier.pkl"
+face_net_model_checkpoint ="/Users/tommyholcomb/Documents/Github/facenet/src/models/pretrained_facenet_model_20180402-114759.pb"
+classifier_model = "/Users/tommyholcomb/Documents/Github/facenet/src/models/lfw_classifier.pkl"
 debug = False
 
 
