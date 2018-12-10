@@ -7,8 +7,8 @@ Usage:
 
 from setuptools import setup
 
-APP = []
-DATA_FILES = ['FaceIDMac']
+APP = ['face_id.py']
+DATA_FILES = ['./model/pretrained_facenet_model_20180402-114759.pb', './classifier/lfw_classifier.pkl']
 OPTIONS = {}
 
 setup(

@@ -79,10 +79,10 @@ def server():
             },
             ns=True)
 
+
 def client():
     client = FaceIDClient()
     print(client.recognize_user())
-
 
 
 if __name__ == "__main__":
@@ -90,5 +90,5 @@ if __name__ == "__main__":
         #with tf.Session() as sess:
         server()
 
-    else:
+    elif sys.argv[1] == '--c':
         client()
