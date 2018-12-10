@@ -1,9 +1,11 @@
 tensorflow==1.12
 scipy
 scikit-learn
+sklearn
 opencv-python
 h5py
 matplotlib
+numpy
 Pillow
 requests
 psutil

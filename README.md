@@ -51,3 +51,7 @@ Performs inference in roughly 2-3 seconds, feels natural with IOS faceid. Using 
 4) Add web cam overlay to login screen.
 
 
+this output might help with keychain 
+ioreg -b -r -n AppleKeyStore
+
+

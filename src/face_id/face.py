@@ -46,8 +46,8 @@ import align.detect_face
 import face_net
 
 gpu_memory_fraction = 0.3
-face_net_model_checkpoint ="./models/pretrained_facenet_model_20180402-114759.pb"
-classifier_model = "./models/lfw_classifier.pkl"
+face_net_model_checkpoint ="./pretrained_facenet_model_20180402-114759.pb"
+classifier_model = "./lfw_classifier.pkl"
 debug = False
 
 

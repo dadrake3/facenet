@@ -7,9 +7,9 @@ Usage:
 
 from setuptools import setup
 
-APP = ['face_id_main.py']
-DATA_FILES = ['./models/pretrained_facenet_model_20180402-114759.pb', './models/lfw_classifier.pkl']
-OPTIONS = {'includes': 'tensoflow'}
+APP = ['./src/face_id_main.py']
+DATA_FILES = ['./src/models/lfw_classifier.pkl', './src/models/pretrained_facenet_model_20180402-114759.pb']
+OPTIONS = {}
 
 setup(
     app=APP,
