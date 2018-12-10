@@ -9,7 +9,7 @@ from setuptools import setup
 
 APP = ['face_id_main.py']
 DATA_FILES = ['./models/pretrained_facenet_model_20180402-114759.pb', './models/lfw_classifier.pkl']
-OPTIONS = {}
+OPTIONS = {'includes': 'tensoflow'}
 
 setup(
     app=APP,
