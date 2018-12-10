@@ -38,16 +38,16 @@ import tensorflow as tf
 from scipy import misc
 import sys
 
-# TODO: THIS NEEDS TO BE FIXED, imports are weird too
-sys.path.append('/Users/daryldrake/Desktop/CS_Projects/Active/face_id_facenet_fork/facenet/')
+sys.path.append('../../')
+
 tf.logging.set_verbosity(tf.logging.ERROR)
 
 import src.align.detect_face
 import src.facenet as facenet
 
 gpu_memory_fraction = 0.3
-facenet_model_checkpoint = "./models/pretrained_facenet_model_20180402-114759.pb"
-classifier_model = "CLASSIFER_MODEL_PATH"
+facenet_model_checkpoint ="./model/pretrained_facenet_model_20180402-114759.pb"
+classifier_model = "./classifier/lfw_classifier.pkl"
 debug = False
 
 

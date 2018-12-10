@@ -44,9 +44,10 @@ Performs inference in roughly 2-3 seconds, feels natural with IOS faceid. Using 
 - Homebrew
 
 ## ToDO
-1) Add support for multiple users.
-
+0) Add client launch daemons for login and for screen savor dismiss
+1) Add support for auto filling password while logged in
 2) Create a build script.
+3) Add support for multiple users.
+4) Add web cam overlay to login screen.
 
-3) Add webcam overlay to login screen.
 

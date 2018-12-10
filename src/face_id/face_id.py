@@ -72,17 +72,6 @@ class FaceIDClient:
         return self.server.recognize_user()
 
 
-
-def main():
-    Pyro4.Daemon.serveSimple(
-            {
-                FaceIDServer: "face_id.server"
-            },
-            ns = True)
-    # server = FaceIDServer()
-    # server.recognize_user()
-
-
 def server():
     Pyro4.Daemon.serveSimple(
             {
@@ -91,13 +80,15 @@ def server():
             ns=True)
 
 def client():
-    pass
-
+    client = FaceIDClient()
+    print(client.recognize_user())
 
 
 
 if __name__ == "__main__":
-    with tf.Session() as sess:
-        main()
+    if sys.argv[1] == '--s':
+        #with tf.Session() as sess:
+        server()
 
-
+    else:
+        client()
