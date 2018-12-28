@@ -154,3 +154,7 @@ src/bin/toco_from_protos
 src/bin/wheel
 src/pip-selfcheck.json
 src/include/python3.6m
+src/face_id/face_id_server.sh
+src/face_id/face_id_client.scpt
+src/face_id/de.ddrake.face-id.server.plist
+src/face_id/de.ddrake.face-id.client.plist
