@@ -1,0 +1,4 @@
+#!/bin/bash
+
+USER_PYTHON -m Pyro4.naming &
+USER_PYTHON FACE_ID_PYTHON_SERVER_PATH

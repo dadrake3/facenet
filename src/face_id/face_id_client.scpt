@@ -1,4 +1,4 @@
-set flag to do shell script "/Users/daryldrake/daryldrake/bin/python /Users/daryldrake/Desktop/CS_Projects/Active/face_id_facenet_fork/facenet/src/face_id/face_id.py --c"
+set flag to do shell script "/Users/daryldrake/daryldrake/bin/python /Users/daryldrake/Desktop/CS_Projects/Active/face_id_facenet_fork/facenet/src/face_id_main.py --c"
 
 if flag is equal to "True" then
 	tell application "System Events"
