@@ -4,7 +4,6 @@ import sys
 
 if __name__ == "__main__":
 	freeze_support()
-
 	if sys.argv[1] == '--s':
 		server()
 	elif sys.argv[1] == '--c':

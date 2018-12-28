@@ -6,17 +6,17 @@ import sys
 import cv2
 
 sys.path.append('./')
-import face_id.face as face
+import face
 
 
 @Pyro4.expose
 @Pyro4.behavior(instance_mode="single")
 class FaceIDServer(object):
     def __init__(self):
-        # self.frame_interval = 3  # Number of frames after which to run face detection
-        # self.face_recognition = face.Recognition()
-        # self.user = 'Daryl Drake'
-        pass
+        self.frame_interval = 3  # Number of frames after which to run face detection
+        self.face_recognition = face.Recognition()
+        self.user = 'Daryl Drake'
+        # pass
 
     def test_server(self):
         return 'hello world'
@@ -81,9 +81,9 @@ def server():
 
 
 def client():
-    client = FaceIDClient()
-    # print(client.recognize_user())
-    client.test()
+    _client = FaceIDClient()
+    print(_client.recognize_user())
+    # client.test()
 
 
 
