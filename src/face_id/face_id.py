@@ -13,9 +13,13 @@ import face_id.face as face
 @Pyro4.behavior(instance_mode="single")
 class FaceIDServer(object):
     def __init__(self):
-        self.frame_interval = 3  # Number of frames after which to run face detection
-        self.face_recognition = face.Recognition()
-        self.user = 'Daryl Drake'
+        # self.frame_interval = 3  # Number of frames after which to run face detection
+        # self.face_recognition = face.Recognition()
+        # self.user = 'Daryl Drake'
+        pass
+
+    def test_server(self):
+        return 'hello world'
 
     def recognize_user(self):
         s = time.time()
@@ -64,6 +68,9 @@ class FaceIDClient:
     def recognize_user(self):
         return self.server.recognize_user()
 
+    def test(self):
+        print(self.server.test_server())
+
 
 def server():
     Pyro4.Daemon.serveSimple(
@@ -75,6 +82,13 @@ def server():
 
 def client():
     client = FaceIDClient()
-    print(client.recognize_user())
+    # print(client.recognize_user())
+    client.test()
+
+
+
+
+
+
 
 
